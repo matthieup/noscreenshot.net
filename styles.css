@@ -88,6 +88,12 @@ h1 span {
   text-decoration: line-through;
   text-decoration-thickness: 0.12em;
   text-decoration-color: rgba(156, 47, 34, 0.85);
+  transition: opacity 0.35s ease;
+  display: inline-block;
+}
+
+h1 span.logo-fade {
+  opacity: 0;
 }
 
 .subtitle {
