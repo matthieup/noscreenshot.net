@@ -24,7 +24,7 @@
         <p class="eyebrow">a public service for workplace civilization</p>
         <h1>
           no
-          <span>screenshot</span>
+          <span id="logo-word">screenshot</span>
         </h1>
         <p class="subtitle">
           please do not dump a blurry rectangle into business chat when a link
@@ -195,6 +195,46 @@
         </div>
       </section>
     </main>
+    <script>
+      (function () {
+        var words = [
+          'screenshot',       // English
+          'capture d\u2019\u00e9cran',  // French
+          'captura de pantalla', // Spanish
+          'Bildschirmfoto',   // German
+          'schermata',        // Italian
+          'captura de tela',  // Portuguese
+          '\u0441\u043d\u0438\u043c\u043e\u043a \u044d\u043a\u0440\u0430\u043d\u0430', // Russian
+          '\u30b9\u30af\u30ea\u30fc\u30f3\u30b7\u30e7\u30c3\u30c8', // Japanese
+          '\u622a\u56fe',     // Chinese
+          '\uc2a4\ud06c\ub9b0\uc0f7', // Korean
+          'schermafbeelding', // Dutch
+          'zrzut ekranu',     // Polish
+          'sk\u00e4rmdump',   // Swedish
+          'ekran g\u00f6r\u00fcnt\u00fcs\u00fc', // Turkish
+          '\u0437\u043d\u0456\u043c\u043e\u043a \u0435\u043a\u0440\u0430\u043d\u0430', // Ukrainian
+          '\u1ea3nh ch\u1ee5p m\u00e0n h\u00ecnh', // Vietnamese
+          'tangkapan layar',  // Indonesian
+          '\u05e6\u05d9\u05dc\u05d5\u05dd \u05de\u05e1\u05da', // Hebrew
+          '\u0644\u0642\u0637\u0629 \u0634\u0627\u0634\u0629', // Arabic
+          '\u0938\u094d\u0915\u094d\u0930\u0940\u0928\u0936\u0949\u091f', // Hindi
+        ];
+        var el = document.getElementById('logo-word');
+        var i = 0;
+        var DISPLAY = 2000;
+        var FADE = 350;
+        if (!el) return;
+        function next() {
+          el.classList.add('logo-fade');
+          setTimeout(function () {
+            i = (i + 1) % words.length;
+            el.textContent = words[i];
+            el.classList.remove('logo-fade');
+          }, FADE);
+        }
+        setInterval(next, DISPLAY + FADE);
+      })();
+    </script>
     <script>
        // Visitor counter using CountAPI.dev
        async function updateVisitorCount() {
