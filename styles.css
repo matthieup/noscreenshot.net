@@ -351,24 +351,32 @@ h2 {
 }
 
 @media (max-width: 420px) {
-  html {
-    font-size: 15px;
-  }
+   html {
+     font-size: 15px;
+   }
 
-  .site-shell {
-    width: min(100% - 0.5rem, 1120px);
-    padding-top: 0.5rem;
-  }
+   .site-shell {
+     width: min(100% - 0.5rem, 1120px);
+     padding-top: 0.5rem;
+   }
 
-  .hero,
-  .chat-card,
-  .prose,
-  .footer-card {
-    padding: 0.9rem;
-  }
+   .hero,
+   .chat-card,
+   .prose,
+   .footer-card {
+     padding: 0.9rem;
+   }
 
-  .message {
-    width: 100%;
-    border-radius: 15px;
-  }
-}
+   .message {
+     width: 100%;
+     border-radius: 15px;
+   }
+ }
+
+.visitor-count {
+   font-size: 0.9rem;
+   color: var(--muted);
+   margin-top: 1rem;
+   display: block;
+   text-align: center;
+ }
